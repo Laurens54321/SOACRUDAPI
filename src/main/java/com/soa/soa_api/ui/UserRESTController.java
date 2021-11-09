@@ -32,7 +32,7 @@ public class UserRESTController {
         return userRepository.findAll();
     }
 
-    @GetMapping("/create")
+    @PostMapping("/create")
     public User create(@PathVariable("name") String name ) {
         User user = new User();
         user.setName(name);
